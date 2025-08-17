@@ -1,4 +1,4 @@
-const apiKey = 'hAldwPxDkqjWgFOggjUSfoC7KPSZzmSzmD8BdGOQ'; 
+const apiKey = 'API'; 
 
 function searchRecipe() {
     const recipeName = document.getElementById('recipe').value;
