@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Nutrition</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container1">
+            <h1><strong>Recipes Nutrition</strong></h1>
+        </div>
+    </header>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="#search">Search Recipe</a></li>
+            <li><a href="#calculator">Nutrition Calculator</a></li>
+        </ul>
+    </nav>
+
+    <div id="search" class="container">
+        <h1>Indian Recipe Nutrition</h1>
+        <label for="recipe">Enter Recipe Name:</label>
+        <input type="text" id="recipe" name="recipe" required>
+        <button onclick="searchRecipe()">Search</button>
+        <div id="result"></div>
+    </div>
+
+    <div id="calculator" class="container">
+        <h1>Recipe Nutrition Calculator</h1>
+        <form id="recipeForm">
+            <label for="recipeName">Recipe Name:</label>
+            <input type="text" id="recipeName" name="recipeName" required><br><br>
+            <div id="ingredients">
+                <label for="ingredient1">Ingredient 1:</label>
+                <input type="text" id="ingredient1" name="ingredient1" placeholder="Ingredient Name" required>
+                <input type="number" id="quantity1" name="quantity1" placeholder="Quantity" required>
+                <select id="unit1" name="unit1" required>
+                    <option value="g">g</option>
+                    <option value="kg">kg</option>
+                    <option value="ml">ml</option>
+                    <option value="l">l</option>
+                </select>
+                <br><br>
+            </div>
+            <button type="button" id="addIngredientBtn" onclick="addIngredient()">Add Ingredient</button>
+            <br><br>
+            <button type="button" onclick="calculateNutrition()">Calculate Nutrition</button>
+        </form>
+        <div id="result2"></div>
+    </div>
+
+    <footer>
+        <div class="container1">
+            <p style="color:white;">&copy; 2024 Recipes Nutrition. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
